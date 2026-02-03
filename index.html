@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shikha Raj | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleTheme()">🌙</button>
+
+<header data-aos="fade-down">
+<h1>Shikha Raj</h1>
+<p>Computer Science Undergraduate | AI/ML | Web Developer</p>
+
+<div class="links">
+<a href="https://github.com/shikharaj15071" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/shikha-raj-8558b025b" target="_blank">LinkedIn</a>
+<a href="https://leetcode.com/u/rajshikha/" target="_blank">LeetCode</a>
+</div>
+</header>
+
+<section data-aos="fade-up">
+<h2>About Me</h2>
+<p>
+Dedicated CSE undergraduate with strong foundations in DSA, Machine Learning and Web Development.
+Experienced in building AI systems and full-stack projects. Actively seeking impactful internships.
+</p>
+</section>
+
+<section data-aos="fade-right">
+<h2>Skills</h2>
+<div class="grid">
+<span>C++</span><span>Python</span><span>Java</span><span>SQL</span>
+<span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+<span>Node.js</span><span>Express</span><span>Git</span>
+<span>Machine Learning</span><span>HuggingFace</span>
+<span>DSA</span><span>OOPS</span><span>DBMS</span>
+</div>
+</section>
+
+<section data-aos="fade-left">
+<h2>Experience</h2>
+<div class="card">
+<h3>IIT Hyderabad – GenAI Internship</h3>
+<p>
+Built AI Health Assistant web app providing disease-based guidance, food suggestions,
+exercise plans, medical tests and medicine reminders using HTML, CSS and JavaScript.
+</p>
+</div>
+</section>
+
+<section>
+<h2 data-aos="zoom-in">Projects</h2>
+
+<div class="card" data-aos="flip-up">
+<h3>Zero-Day Cyberattack Detection</h3>
+<p>Hybrid ML model (XGBoost + RF + anomaly detection) with HuggingFace T5 recommendations.</p>
+<a href="https://www.kaggle.com/code/shikharaj15071/zero-day-attack-0f203f" target="_blank">View Project</a>
+</div>
+
+<div class="card" data-aos="flip-up">
+<h3>Resume Checker ATS</h3>
+<p>NLP + Streamlit ATS scoring and resume analyzer.</p>
+<a href="https://resume-checker-bel2qpw7wcbhmdcsl4vudf.streamlit.app/" target="_blank">Live App</a>
+</div>
+
+<div class="card" data-aos="flip-up">
+<h3>Women Safety Analytics</h3>
+<p>ML incident classification + geospatial dashboards.</p>
+<a href="https://shikharaj15071.github.io/womenhood/" target="_blank">Live Website</a>
+</div>
+
+</section>
+
+<section data-aos="fade-up">
+<h2>Education</h2>
+<p><b>BIT Mesra, Ranchi</b></p>
+<p>B.Tech CSE (2022–2026)</p>
+<p>CGPA: 7.31</p>
+</section>
+
+<!-- <section data-aos="fade-up">
+<h2>Achievements</h2>
+<ul>
+<li>LeetCode 365 Days Batch</li>
+<li>CodeHelp DSA</li>
+<li>Ethical Hacking Certificate</li>
+<li>Flipkart Grid 6.0</li>
+</ul>
+</section> -->
+
+<footer data-aos="fade-up">
+<p>📧 rajshikha1998@gmail.com | 📱 +91 7488306265</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+
+const btn=document.querySelector(".toggle");
+
+if(localStorage.theme){
+document.body.classList.toggle("light",localStorage.theme==="light");
+}else if(window.matchMedia("(prefers-color-scheme: light)").matches){
+document.body.classList.add("light");
+}
+
+btn.textContent=document.body.classList.contains("light")?"🌞":"🌙";
+
+function toggleTheme(){
+document.body.classList.toggle("light");
+localStorage.theme=document.body.classList.contains("light")?"light":"dark";
+btn.textContent=document.body.classList.contains("light")?"🌞":"🌙";
+}
+</script>
+
+</body>
+</html>
